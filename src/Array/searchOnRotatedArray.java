@@ -1,6 +1,5 @@
 //java program to perform the binary search on rotated sorted array
 package Array;
-
 public class searchOnRotatedArray {
     public static int search(int []array , int key)
     {
@@ -49,7 +48,7 @@ public class searchOnRotatedArray {
         int []array = {4,5,6,7,0,1,2};
         System.out.println("Here is your Rotated sorted array");
         display(array);
-        int position = search(array , 6);
+        int position = search(array , 61);
         if(position==-1)
         {
             System.out.println("\nNot found");
