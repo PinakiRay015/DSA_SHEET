@@ -1,7 +1,8 @@
-//java program to perform the binary search on rotated sorted array
+//java program to practice search an element on rotated matrix using binary search
 package Array;
-public class searchOnRotatedArray {
-    public static int search(int []array , int key)
+
+public class rotatedArray {
+    public static int rotatedSearch(int []array , int key)
     {
         int start = 0;
         int end = array.length-1;
@@ -12,6 +13,7 @@ public class searchOnRotatedArray {
             {
                 return mid;
             }
+
             else if(array[start] < array[mid])
             {
                 if(key>=array[start] && key<array[mid])
@@ -23,6 +25,7 @@ public class searchOnRotatedArray {
                     start = mid+1;
                 }
             }
+
             else
             {
                 if(key>array[mid] && key<=array[end])
@@ -37,25 +40,16 @@ public class searchOnRotatedArray {
         }
         return -1;
     }
-    public static void display(int []array)
-    {
-        for(int i=0 ; i<array.length ; i++)
-        {
-            System.out.print(array[i]+"\t");
-        }
-    }
     public static void main(String[] args) {
-        int []array = {4,5,6,7,0,1,2};
-        System.out.println("Here is your Rotated sorted array");
-        display(array);
-        int position = search(array , 0);
-        if(position==-1)
+        int []array = {4,5,6,7,0,1,2,3};
+        int positon = rotatedSearch(array , 0);
+        if(positon==-1)
         {
-            System.out.println("\nNot found");
+            System.out.println("Not found!");
         }
         else
         {
-            System.out.println("\nThe position of the key is "+position);
+            System.out.println("The element is present in the index "+positon);
         }
     }
 }
