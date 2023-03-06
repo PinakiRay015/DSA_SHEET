@@ -6,11 +6,12 @@ public class maxSubArraySum3 {
     {
         int maxSum = Integer.MIN_VALUE;
         int currentSum = 0;
-        for(int i = 0 ; i<array.length ; i++)
-        {
+        int i = 0 ;
+        while (i<array.length) {
             currentSum += array[i];
             maxSum = Math.max(currentSum , maxSum);
             currentSum = Math.max(currentSum , 0);
+            i++;
         }
 
         return maxSum;
