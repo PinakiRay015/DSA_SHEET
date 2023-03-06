@@ -1,4 +1,4 @@
-//java program to find the the maximum sub array sum (KADANE'S ALGORITHM)
+//java program to find the maximum sub array sum (KADANE'S ALGORITHM)
 package Array;
 
 public class maxSubArraySum3 {
@@ -8,14 +8,15 @@ public class maxSubArraySum3 {
         int currentSum = 0;
         for(int i = 0 ; i<array.length ; i++)
         {
-            currentSum = (currentSum<0) ? 0 : currentSum+array[i];
+            currentSum += array[i];
             maxSum = Math.max(currentSum , maxSum);
+            currentSum = Math.max(currentSum , 0);
         }
 
         return maxSum;
     }
     public static void main(String[] args) {
-        int []array = {-2 , -3 , 4 , -1 , -2 , 1 , 5 , -3};
-        System.out.println(getMaxSum(array));
+        int []array = {-2,1,-3,4,-1,2,1,-5,4};
+        System.out.println("The maximum sub array sum is "+getMaxSum(array));
     }
 }
