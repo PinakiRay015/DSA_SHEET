@@ -3,13 +3,12 @@ package Array;
 public class maxSubArraySum {
     public static int getMaxSum(int []array)
     {
-        int currentSum = 0;
         int maxSum = Integer.MIN_VALUE;
         for(int i=0 ; i<array.length ; i++)
         {
             for(int j=i ; j<array.length ; j++)
             {
-                currentSum = 0;
+                int currentSum = 0;
                 for(int k = i ; k<=j ; k++)
                 {
                     currentSum += array[k];
