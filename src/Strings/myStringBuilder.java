@@ -1,4 +1,4 @@
-//java program to illustrate the string Builder
+//java program to illustrate the StringBuilder
 package Strings;
 
 public class myStringBuilder {
