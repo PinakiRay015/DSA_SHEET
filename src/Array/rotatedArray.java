@@ -1,4 +1,4 @@
-//java program to practice search an element on rotated matrix using binary search
+//java program to Practice.practice search an element on rotated matrix using binary search
 package Array;
 
 public class rotatedArray {
