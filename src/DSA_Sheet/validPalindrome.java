@@ -24,7 +24,7 @@ public class validPalindrome {
         return false;
     }
     public static void main(String[] args) {
-        String str = new String("racecar");
+        String str = new String("A man, a plan, a canal: Panama");
         System.out.println(checkValidation(str));
     }
 }
